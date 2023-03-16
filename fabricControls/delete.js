@@ -5,7 +5,7 @@ const fabricDeleteControl = (fabric) => {
 
   function renderIcon(icon) {
     return function renderIcon(ctx, left, top, styleOverride, fabricObject) {
-      var size = this.cornerSize;
+      const size = this.cornerSize;
       ctx.save();
       ctx.translate(left, top);
       ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle));
@@ -15,8 +15,8 @@ const fabricDeleteControl = (fabric) => {
   }
 
   function deleteObject(eventData, transform) {
-    var target = transform.target;
-    var canvas = target.canvas;
+    const target = transform.target;
+    const canvas = target.canvas;
     canvas.remove(target);
     canvas.requestRenderAll();
   }

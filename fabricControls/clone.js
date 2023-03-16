@@ -1,4 +1,4 @@
-const fabricCloneControl = (fabric, setList) => {
+const fabricCloneControl = (fabric) => {
 
   const HideControls = {
     'tl': false,
@@ -16,7 +16,6 @@ const fabricCloneControl = (fabric, setList) => {
   cloneImg.src = '/clone.svg'
   let canvasCopy = null
 
-
   function cloneObject(eventData, transform) {
     const target = transform.target
     const canvas = target.canvas
@@ -28,8 +27,6 @@ const fabricCloneControl = (fabric, setList) => {
       canvas.renderAll();
       cloned.setControlsVisibility(HideControls)
     })
-    console.log(canvas._objects);
-    setList('Hola')
   }
 
   function renderIcon(icon) {
